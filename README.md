@@ -14,7 +14,7 @@ If you want a no-hassle setup consider signing up for the $1 tier on the Patreon
 
 ### Requirements
 
-1. Ensure `npm` and `rclone` are installed on your system.
+1. Ensure `npm` and `rclone` are installed on your system. (`rclone` is needed for the script to deal with the audio files)
 
 ### Cloudflare
 
@@ -32,7 +32,7 @@ If you want a no-hassle setup consider signing up for the $1 tier on the Patreon
 
 4. Go to `R2 Project Storage` in the left sidebar and create a new bucket named `yomitan-audio-bucket`.
 
-5. Go to `Storage & Database` → `D1 SQL Database` and create a new database called `yomitan-audio-db`.
+5. Go to `Storage & Database` → `D1 SQL Database` in the left sidebar and create a new database called `yomitan-audio-db`.
 
 ### Locally
 
@@ -41,7 +41,7 @@ If you want a no-hassle setup consider signing up for the $1 tier on the Patreon
     - `npm install` to install the dependencies.
     - `npx wrangler login` to authenticate with your Cloudflare account.
 
-2. Copy `wrangler.toml.example` to `wrangler.toml` and replace the `database_id` entry with the ID of your previously created R2 bucket. Also adjust:
+2. Copy `wrangler.toml.example` to `wrangler.toml` and replace the `database_id` entry with the ID of your previously created D1 SQL Database. Also adjust:
 
     - `AUTHENTICATION_ENABLED` if you want the endpoints to be protected by a password **(STRONGLY RECOMMENDED)**.
     - `AWS_POLLY_ENABLED` if you want the pitch acccent TTS, as well as the AWS credentials with Polly access.
@@ -53,7 +53,7 @@ If you want a no-hassle setup consider signing up for the $1 tier on the Patreon
     - `API_KEYS` with a comma separated list of API keys that will be used to authenticate requests.
     - AWS credentials with Polly access.
 
-4. Download the audio data and put it into the repository folder. [MORE INFO ON DISCORD](https://animecards.site/discord/). (You should have a bunch of folders ending with `_files` in `data`.)
+4. Download the audio data and put it into the `data` folder in the repository folder. [MORE INFO ON DISCORD](https://animecards.site/discord/). (You should have a bunch of folders ending with `_files` in `data`.)
 
 5. Import the entries and pitch data into your D1 database by running the following command:
 
@@ -63,7 +63,7 @@ If you want a no-hassle setup consider signing up for the $1 tier on the Patreon
 
     ![API Token](img/api_key.png)
 
-7. Upload the audio files to your R2 bucket by running the following command, replacing the placeholders with your own values from the previous step:
+7. Upload the audio files to your R2 bucket by running the following command (run this in one line), replacing the placeholders with your own values from the previous step (Remark: the account id is the id of the created worker) (Remark: in macOS, we need to change the script since the `find` command on macOS does not support the `-printf` option, which is present in GNU `find`. macOS uses the BSD version of `find`, which has different syntax and options.):
 
     - `R2_ACCESS_KEY_ID="your_access_key" R2_SECRET_ACCESS_KEY="your_secret_key" R2_ACCOUNT_ID="your_cloudflare_account_id" bash scripts/upload-to-r2.sh`
 
