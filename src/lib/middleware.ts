@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { IRequest } from 'itty-router';
 
 export const withApiKey = async (request: IRequest, env: Env, context: ExecutionContext) => {

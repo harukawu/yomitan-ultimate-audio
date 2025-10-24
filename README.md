@@ -14,7 +14,15 @@ Additionally it has extra features like pitch accent aware TTS and boasts the la
 
 If you want a no-hassle setup consider signing up for the $1 tier on the Patreon: <https://www.patreon.com/quizmaster/membership>. It saves you the trouble of setting up a Cloudflare and AWS account to enjoy all features. 🙂
 
-## Setup
+## Local Setup (macOS)
+
+**NEW:** You can now run this server locally on your Mac without needing a Cloudflare account! This is perfect for personal use and requires no cloud setup.
+
+👉 **See [README.LOCAL.md](README.LOCAL.md) for complete local setup instructions**
+
+Local setup is simpler, free, and gives you full control over your data. The instructions below are for deploying to Cloudflare Workers (cloud deployment).
+
+## Setup (Cloudflare Workers Deployment)
 
 ### Requirements
 

@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"target": "es2021",
+		"lib": [
+			"es2021",
+			"dom"
+		],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": false,
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"types": ["node"]
+	},
+	"include": [
+		"src/**/*.ts",
+		"worker-configuration.d.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	],
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs",
+			"strict": false
+		}
+	}
+}
+

@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { AutoRouter, IRequest, json, error, createResponse } from 'itty-router';
 import { unpack_term_reading, unpack_pitch, unpack_sources } from '../lib/queryUtils';
 import { queryAudioDB, generateDisplayNames, sortResults } from '../lib/queryAudioDB';

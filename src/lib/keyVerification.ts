@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { IRequest, StatusError } from 'itty-router';
 
 export async function verifyApiKey(request: IRequest, env: Env) {

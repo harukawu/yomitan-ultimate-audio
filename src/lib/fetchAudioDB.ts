@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { StatusError } from 'itty-router';
 
 export async function fetchAudioDB(source: string, file: string, env: Env): Promise<Blob> {

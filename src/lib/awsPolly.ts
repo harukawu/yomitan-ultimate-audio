@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { AwsClient } from 'aws4fetch';
 import { StatusError } from 'itty-router';
 import { log } from './logger';

@@ -6,16 +6,29 @@
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"local:init": "node scripts/init-local-db.js",
+		"local:dev": "npx ts-node --project tsconfig.server.json src/server.ts",
+		"local:start": "npx ts-node --project tsconfig.server.json src/server.ts",
+		"local:build": "tsc --project tsconfig.server.json"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250409.0",
+		"@types/better-sqlite3": "^7.6.12",
+		"@types/cors": "^2.8.17",
+		"@types/express": "^4.17.21",
+		"@types/node": "^22.10.2",
 		"prettier": "^3.5.3",
+		"ts-node": "^10.9.2",
 		"typescript": "^5.5.2",
 		"wrangler": "^4.7.0"
 	},
 	"dependencies": {
 		"aws4fetch": "^1.0.20",
+		"better-sqlite3": "^11.8.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
 		"itty-fetcher": "^0.9.4",
 		"itty-router": "^5.0.18"
 	}

@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { IRequest, StatusError } from 'itty-router';
 import { YomitanAudioSource } from './yomitanResponse';
 import { AudioSource } from './queryUtils';

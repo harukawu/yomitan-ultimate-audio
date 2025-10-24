@@ -1,0 +1,6 @@
+{
+  "port": 3000,
+  "dataDir": "./data",
+  "databasePath": "./data/yomitan-audio.db"
+}
+

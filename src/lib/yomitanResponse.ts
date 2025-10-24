@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { IRequest } from 'itty-router';
 import type { AudioEntry } from './queryAudioDB';
 

@@ -1,3 +1,5 @@
+/// <reference path="../types/env.d.ts" />
+
 import { StatusError } from 'itty-router';
 import { katakanaToHiragana } from './utils';
 
