@@ -91,7 +91,7 @@ Local setup is simpler, free, and gives you full control over your data. The ins
 
 ### Yomitan
 
-1. Go to the Yomitan settings and set the `Audio Source URL` to your worker URL and `audio/list?term={term}&reading={reading}&apiKey=yourApiKey` so for example `https://yomitan-audio-worker.friedrichde.workers.dev/audio/list?term={term}&reading={reading}&apiKey=m9NixGU7qtWv4SYr`
+1. Go to the Yomitan settings and set the `Audio Source URL` to your worker URL and `audio/list?term={term}&reading={reading}&apiKey=yourApiKey` so for example `https://yomitan-audio-worker.friedrichde.workers.dev/audio/list?term={term}&reading={reading}&apiKey=m9NixGU7qtWv4SYr`. To use a specific audio source, use like `&sources=nhk16`.
 
     ![Yomitan Settings](img/yomitan_settings.png)
 
